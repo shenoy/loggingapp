@@ -1,0 +1,110 @@
+2022-02-19 15:43:06,322 INFO  StartupInfoLogger:55 - [] Starting LoggingappApplication using Java 11.0.12 on DESKTOP-LR8S3H9 with PID 5012 (C:\loggingapp\target\classes started by rajes in C:\loggingapp)
+2022-02-19 15:43:06,324 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
+2022-02-19 15:43:06,409 INFO  DeferredLog:255 - [] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-19 15:43:06,410 INFO  DeferredLog:255 - [] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-19 15:43:07,810 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8080 (http)
+2022-02-19 15:43:07,826 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-02-19 15:43:07,826 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-19 15:43:07,913 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-02-19 15:43:07,914 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 1502 ms
+2022-02-19 15:43:08,167 INFO  WelcomePageHandlerMapping:57 - [] Adding welcome page template: index
+2022-02-19 15:43:08,316 INFO  OptionalLiveReloadServer:58 - [] LiveReload server is running on port 35729
+2022-02-19 15:43:08,364 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-19 15:43:08,381 INFO  StartupInfoLogger:61 - [] Started LoggingappApplication in 2.862 seconds (JVM running for 4.553)
+2022-02-19 15:43:37,929 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-19 15:43:37,931 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2022-02-19 15:43:37,934 INFO  FrameworkServlet:547 - [] Completed initialization in 1 ms
+2022-02-19 15:43:51,240 INFO  LogsController:24 - [] [getMessage] info message
+2022-02-19 15:43:51,241 WARN  LogsController:25 - [] [getMessage] warn message
+2022-02-19 15:43:51,241 ERROR LogsController:26 - [] [getMessage] error message
+2022-02-19 15:43:51,259 ERROR DirectJDKLog:175 - [] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ArithmeticException: / by zero] with root cause
+java.lang.ArithmeticException: / by zero
+	at com.example.loggingapp.LogsController.getLogs(LogsController.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-02-19 15:47:47,383 INFO  StartupInfoLogger:55 - [] Starting LoggingappApplication using Java 11.0.12 on DESKTOP-LR8S3H9 with PID 6520 (C:\loggingapp\target\classes started by rajes in C:\loggingapp)
+2022-02-19 15:47:47,385 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
+2022-02-19 15:47:47,500 INFO  DeferredLog:255 - [] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-19 15:47:47,500 INFO  DeferredLog:255 - [] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-19 15:47:48,859 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8080 (http)
+2022-02-19 15:47:48,875 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-02-19 15:47:48,875 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-19 15:47:49,033 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-02-19 15:47:49,034 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 1533 ms
+2022-02-19 15:47:49,393 INFO  WelcomePageHandlerMapping:57 - [] Adding welcome page template: index
+2022-02-19 15:47:49,561 INFO  OptionalLiveReloadServer:58 - [] LiveReload server is running on port 35729
+2022-02-19 15:47:49,623 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-19 15:47:49,652 INFO  StartupInfoLogger:61 - [] Started LoggingappApplication in 3.189 seconds (JVM running for 5.134)
+2022-02-19 15:47:52,611 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-19 15:47:52,613 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2022-02-19 15:47:52,615 INFO  FrameworkServlet:547 - [] Completed initialization in 2 ms
+2022-02-19 15:47:52,659 INFO  LogsController:24 - [] [getMessage] info message
+2022-02-19 15:47:52,659 WARN  LogsController:25 - [] [getMessage] warn message
+2022-02-19 15:47:52,660 ERROR LogsController:26 - [] [getMessage] error message
+2022-02-19 15:51:25,228 INFO  StartupInfoLogger:55 - [] Starting LoggingappApplication using Java 11.0.12 on DESKTOP-LR8S3H9 with PID 13460 (C:\loggingapp\target\classes started by rajes in C:\loggingapp)
+2022-02-19 15:51:25,230 INFO  SpringApplication:637 - [] No active profile set, falling back to default profiles: default
+2022-02-19 15:51:25,365 INFO  DeferredLog:255 - [] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-02-19 15:51:25,366 INFO  DeferredLog:255 - [] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-02-19 15:51:26,692 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 8080 (http)
+2022-02-19 15:51:26,705 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-02-19 15:51:26,706 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-19 15:51:26,803 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-02-19 15:51:26,804 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 1437 ms
+2022-02-19 15:51:27,128 INFO  WelcomePageHandlerMapping:57 - [] Adding welcome page template: index
+2022-02-19 15:51:27,263 INFO  OptionalLiveReloadServer:58 - [] LiveReload server is running on port 35729
+2022-02-19 15:51:27,305 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-19 15:51:27,318 INFO  StartupInfoLogger:61 - [] Started LoggingappApplication in 2.955 seconds (JVM running for 4.839)
+2022-02-19 15:51:54,745 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-19 15:51:54,746 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2022-02-19 15:51:54,747 INFO  FrameworkServlet:547 - [] Completed initialization in 1 ms
+2022-02-19 15:51:54,777 INFO  LogsController:24 - [] [getMessage] info message
+2022-02-19 15:51:54,777 WARN  LogsController:25 - [] [getMessage] warn message
+2022-02-19 15:51:54,778 ERROR LogsController:26 - [] [getMessage] error message
